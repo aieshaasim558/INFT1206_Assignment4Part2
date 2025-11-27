@@ -36,3 +36,24 @@ const images = [
 
 /* Base URL for images */
 const baseURL = "images/";
+
+/* 2. Add thumbnails dynamically */
+
+for (const img of images) {
+  const newImage = document.createElement("img");
+  newImage.src = baseURL + img.filename;
+  newImage.alt = img.alt;
+  newImage.setAttribute("tabindex", "0");
+
+  newImage.addEventListener("click", () => {
+    updateDisplayedImage(newImage);
+  });
+
+  thumbBar.appendChild(newImage);
+}
+/* 3. Update displayed image */
+
+function updateDisplayedImage(imgElement) {
+  displayedImage.src = imgElement.src;
+  displayedImage.alt = imgElement.alt;
+}
