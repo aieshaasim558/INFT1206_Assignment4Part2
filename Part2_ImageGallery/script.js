@@ -57,3 +57,16 @@ function updateDisplayedImage(imgElement) {
   displayedImage.src = imgElement.src;
   displayedImage.alt = imgElement.alt;
 }
+/* 4. Darken/Lighten button functionality */
+
+btn.addEventListener("click", () => {
+  if (btn.classList.contains("dark")) {
+    btn.textContent = "Darken";
+    overlay.style.backgroundColor = "rgb(0 0 0 / 0)";
+    btn.classList.remove("dark");
+  } else {
+    btn.textContent = "Lighten";
+    overlay.style.backgroundColor = "rgb(0 0 0 / 0.5)";
+    btn.classList.add("dark");
+  }
+});
