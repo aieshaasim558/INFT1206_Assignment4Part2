@@ -22,7 +22,7 @@ const images = [
 ];
 
 /* Base URL for images */
-const baseURL = "images/";
+const baseURL = "";
 
 /* 2. Add thumbnails dynamically */
 
